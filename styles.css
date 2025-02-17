@@ -49,3 +49,50 @@ table {
 	border-spacing: 0;
 }
 
+
+:root {
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2
+    --darkgray: #222222;
+    --lightgray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+h1, h2, h3{
+    font-family: 'Molle', serif;
+}
+
+h4, p, q, small, nav, button, form{
+    font-family: 'Montserrat', sans;
+}
+/*mobile first*/
+#skip {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+/*medium screen*/
+@media screen and (min-width: 600px){
+    
+}
+
+/*large screens*/
+@media screen and (min-width: 800px){
+    
+}
