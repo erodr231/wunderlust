@@ -54,15 +54,20 @@ table {
     --yellow: #F6D64A;
     --teal: #55BCD5;
     --purple: #9B26B0;
-    --blue: #499BD2
+    --blue: #499BD2;
     --darkgray: #222222;
     --lightgray: #EAEAEA;
     --white: #FFFFFF;
     --black: #000000;
 }
 
+body{
+    color: var(--darkgray);
+}
+
 h1, h2, h3{
     font-family: 'Molle', serif;
+    
 }
 
 h4, p, q, small, nav, button, form{
@@ -88,6 +93,75 @@ h4, p, q, small, nav, button, form{
     overflow:hidden;
 }
 
+header{
+    background-image: linear-gradient(var(--teal), var(--white));
+}
+
+h1{
+    font-size: 2.5em;
+    padding: 0 1rem;
+}
+
+#logo img{
+    display: block;
+    width: 9rem;
+    height: auto;
+    padding: 1rem 0;
+}
+
+header p{
+    letter-spacing: 1.2px;
+    line-height: 20px;
+    padding: 0 1rem;
+}
+
+#menu-toggle{
+    display: block;
+    position: relative;
+    top: -125px;
+    left: 200px;
+    z-index: 1;
+    user-select: none;
+}
+
+#menu-toggle a{
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+}
+
+#main-content{
+    position: relative;
+    top: -30px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    padding: .5rem 1rem;
+}
+
+#intro p{
+    padding: 0 1rem;
+    line-height: 25px;
+    letter-spacing: 1px;
+    font-size: .9rem;
+}
+
+#img-grid{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    padding: .5rem 0;
+}
+
+#img-grid img{
+    width: 100%;
+    height: auto;
+}
+
+#plan{
+    background-color: var(--yellow);
+}
 /*medium screen*/
 @media screen and (min-width: 600px){
     
