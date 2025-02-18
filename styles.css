@@ -331,40 +331,77 @@ input {
     line-height: 1;
 }
 
+fieldset{
+    padding-bottom: 1rem;
+}
 fieldset label {
     font-weight: 100;
     text-transform: capitalize;
 }
 
-fieldset{
-    display: flex;
-    flex-direction: column;
-}
 
 fieldset label{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.radio-label{
-    padding: 0 1rem;
+    font-size: 1.2rem;
+    line-height: 2;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
 }
 
 input[type="radio"]{
     appearance: none;
     margin: 0;
     color: var(--purple);
-    width: 1.15em;
-    height: 1.15em;
-    border: 0.15em solid currentColor;
+    width: 3em;
+    height: 3em;
+    border: 0.15em solid var(--purple);
     border-radius: 50%;
+
+    display: grid;
+    place-content: center;
 }
 
-
-.radio-input:checked{
-    color: var(--purple);
+input[type="radio"]::before{
+    content: "";
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--purple); 
 }
+
+input[type="radio"]:checked::before{
+    transform: scale(2);
+}
+
+.radio-label{
+    padding: .2rem 2rem;
+}
+
+#selects{
+    padding: .5rem 0;
+}
+
+/* WORK ON FINAL PORTION OF FORM */
+
+footer{
+    background-color: var(--lightgray);
+    padding: .5em 5em 1em 5em;
+    font-size: .7em;
+    line-height: 3em;
+}
+
+footer a{
+    color: var(--darkgray);
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* WORK ON BREAKPOINTS */
+
 /*medium screen*/
 @media screen and (min-width: 600px){
     
