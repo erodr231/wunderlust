@@ -341,16 +341,30 @@ fieldset{
     flex-direction: column;
 }
 
-input[type="radio"]{
-    appearance: none;
-  margin: 0;
-  color: var(--purple);
-  width: 1.15em;
-  height: 1.15em;
-  border: 0.15em solid currentColor;
-  border-radius: 50%;
+fieldset label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
+.radio-label{
+    padding: 0 1rem;
+}
+
+input[type="radio"]{
+    appearance: none;
+    margin: 0;
+    color: var(--purple);
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+}
+
+
+.radio-input:checked{
+    color: var(--purple);
+}
 /*medium screen*/
 @media screen and (min-width: 600px){
     
