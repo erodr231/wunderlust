@@ -60,6 +60,10 @@ table {
     --white: #FFFFFF;
     --black: #000000;
 }
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
 html, body{
     overflow-x: hidden;
 }
@@ -322,13 +326,18 @@ label, legend{
     padding: .12rem;
 }
 
-input {
+input{
+    margin-left: .3rem;
+}
+
+input, .custom-select{
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     padding: .675rem 1rem;
     border: 2.5px solid var(--purple);
     border-radius: 2px;
     line-height: 1;
+    width: 100%;
 }
 
 fieldset{
@@ -379,11 +388,49 @@ input[type="radio"]:checked::before{
     padding: .2rem 2rem;
 }
 
-#selects{
-    padding: .5rem 0;
+select{
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
 }
 
-/* WORK ON FINAL PORTION OF FORM */
+.custom-select{
+    margin-left: .3rem;
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+}
+
+select, .custom-select:after{
+    grid-area: select;
+    justify-self: end;
+}
+
+.custom-select::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--purple);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  }
+
+  input[type="submit"]{
+    background-color: var(--purple);
+    color: var(--lightgray);
+    width: 100%;
+    border-radius: 0;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+  }
 
 footer{
     background-color: var(--lightgray);
