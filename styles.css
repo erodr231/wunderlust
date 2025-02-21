@@ -821,9 +821,6 @@ footer a{
 
     #contact{
         margin: 2rem;
-        display: inline-flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
     }
 
     #contact h3{
@@ -835,7 +832,7 @@ footer a{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
         gap: 10px;
-        margin: 0;
+        margin: 0 auto;
         width: 100%;
     }
    
