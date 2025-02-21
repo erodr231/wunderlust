@@ -73,7 +73,7 @@ body{
 }
 
 h1, h2, h3{
-    font-family: 'Molle', serif;
+    font-family: 'Molle';
 }
 
 h4, p, q, small, nav, button, form{
@@ -122,7 +122,7 @@ header p{
     padding: 0 1rem;
 }
 
-li.active{
+.active {
     background-color: var(--yellow);
 }
 
@@ -612,8 +612,9 @@ footer a{
     }
 
     nav {
-        position: absolute;
-        left: 467px;
+        position: relative;
+        left: 24.5%;
+        top: -808%;
     }
 
     h1{
@@ -638,5 +639,141 @@ footer a{
         width: 110%;
     }
 
+    #intro{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .5fr 2fr;
+        padding: 2rem;
+    }
+
+    #intro h2{
+        padding-top: 2rem;
+    }
     
+    #intro p{
+        grid-column: 1/2;
+        font-size: .8rem;
+    }
+
+    #img-grid{
+        grid-column: 2/-1;
+        grid-row: 1/3;
+        grid-gap: .5rem;
+    }
+
+    li a{
+        padding: .5rem;
+    }
+
+    #plan{
+        padding: 2rem;
+    }
+
+    #plan div{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        margin: 0;
+    }
+
+    #plan section, #plan img, #plan a{
+        height: 80%;
+        width: auto;
+    }
+
+    #plan h4{
+        font-size: 1rem;
+    }
+    #testimonials{
+        margin: 2rem;
+    }
+    #testimonials div{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 1fr;
+        align-items: center;
+        margin: 1rem;
+    }
+
+    #testimonials section{
+        height: 70%;
+        width: auto;
+        justify-content: center;
+    }
+    #testimonials h3{
+        font-size: 3rem;
+    }
+    #testimonials h4{
+        font-size: 1.3rem;
+    }
+    #testimonials q{
+        padding: 0;
+        font-size: .9em;
+    }
+
+    #about{
+        padding: 2rem 0;
+    }
+
+    #about h3{
+        text-align: left;
+        padding: 0rem 2rem;
+    }
+
+    #about div{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #contact{
+        margin: 2rem;
+        display: inline-flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    #contact h3{
+        padding: 0;
+    }
+
+    #contact form{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 10px;
+        margin: 0;
+        width: 100%;
+    }
+   
+
+    input {
+        margin-left: 0;
+    }
+
+    input[type="radio"]{
+        width: 3em;
+        height: 3em;
+    }
+
+    .radio-label{
+        padding: .2rem 2rem;
+    }
+
+    input[type="radio"]:checked::before{
+        transform: scale(2);
+    }
+
+    input[type="submit"]{
+        margin: 3rem;
+        width: 75%;
+        margin-left: 25%;
+    }
+
+    footer{
+        display: grid;
+        grid-template-columns: 5fr 1fr 1fr;
+    }
+
 }
