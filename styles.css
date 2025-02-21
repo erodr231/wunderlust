@@ -512,6 +512,27 @@ footer a{
 
 /*medium screen*/
 @media screen and (min-width: 600px){
+
+    #menu-toggle{
+        top: auto;
+        left: auto;
+        position: static;
+        z-index: 0;
+    }
+
+    #menu-toggle label{
+        display: none;
+    }
+
+    ul{
+        position: static;
+        background: none;
+    }
+    ul li{
+        border: none;
+        padding: 0;
+    }
+
     a{
         text-decoration: none;
         color: var(--darkgray);
@@ -564,6 +585,7 @@ footer a{
     }
     #intro{
         display: grid;
+        padding-top: .5rem;
     }
 
     
