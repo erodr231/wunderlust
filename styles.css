@@ -158,14 +158,13 @@ header p{
     background-color: var(--yellow);
     padding: 1.5rem;
     width: auto;
-    height: 30px;
     z-index: 2;
 }
 
 #menu-toggle input:checked + label{
     background-color: var(--darkgray);
     color: var(--white);
-    right: 67%;
+    right: 13.25rem;
     padding: .5rem;
     transition: right .3s ease;
     text-align: center;
@@ -194,7 +193,7 @@ ul li{
 }
 
 #menu-toggle input:checked ~ ul{
-    right: 67%;
+    right: 13.25rem;
 }
 
 /* add hamgurger menu*/
